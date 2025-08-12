@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -152,18 +151,6 @@
         }
     </style>
 </head>
-<button id="send">Отправить данные боту</button>
-   <script>
-     const tg = window.Telegram?.WebApp;
-     if (tg) {
-       tg.expand(); // во всю высоту
-       document.getElementById('send').addEventListener('click', () => {
-         tg.sendData(JSON.stringify({ action: 'created', ts: Date.now() }));
-       });
-     } else {
-       console.log('Открыто не в Telegram WebApp');
-     }
-   </script>
 <body class="font-sans bg-gray-100 min-h-screen flex items-center justify-center p-4">
     <div class="flex flex-col lg:flex-row bg-white rounded-lg shadow-xl overflow-hidden w-full max-w-6xl">
         <!-- Left Panel: Edit Area -->
@@ -442,5 +429,6 @@
     </script>
 </body>
 </html>
+
 
 
